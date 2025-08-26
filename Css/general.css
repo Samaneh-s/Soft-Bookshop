@@ -1,0 +1,78 @@
+/*main color:#f6eee1
+secondary color:#003060
+text color #c86b30 & #003060:
+Social logo color:#a47551
+button color:#eb5b13*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+}
+
+.heading-primary {
+  color: #003060;
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+  font-family: "Roboto Slab";
+}
+
+.heading-secondary {
+  color: #a47551;
+  font-size: 2.4rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  font-family: "Roboto Slab";
+}
+
+.btn-fill:link,
+.btn-fill:visited {
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #eb5b13;
+
+}
+
+.btn-fill:hover,
+.btn-fill:active {
+  background-color: #003060;
+}
+
+.footer {
+  height: auto;
+  background-color: #003060;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-main-texts {
+  color: #fff;
+  padding: 6rem 4rem 2rem 4rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer-secondary-texts {
+  color: #fff;
+  padding: 1rem 0 0.5rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
