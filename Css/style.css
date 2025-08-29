@@ -9,12 +9,13 @@
 }
 
 .header {
-  display: flex;
+  /* old */
+  /* display: flex;
   justify-content: space-between;
-  padding: 0 3.2rem;
+  padding: 0 3.2rem; */
 }
 
-.logo {
+.logo a {
   height: 5rem;
   width: 5rem;
   margin-bottom: 8rem;
@@ -31,7 +32,6 @@
 
 .main-nav-link:link,
 .main-nav-link:visited {
-  display: inline-block;
   text-decoration: none;
   color: #003060;
   font-weight: 500;
@@ -50,8 +50,9 @@
 
 .main-nav-link.cta:link,
 .main-nav-link.cta:visited {
-  padding: 1.2rem 2.4rem;
+  padding: 8px 16px;
   border-radius: 9px;
+  font-weight: bold;
   color: #fff;
   background-color: #eb5b13;
 }
@@ -64,17 +65,29 @@
 
 .nav-list {
   list-style: none;
-  display: flex;
+  /* old */
+
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem; */
+
+  /* new */
+  display: flex;
   gap: 2rem;
-
-
+  align-items: center;
 }
 
 .main-nav {
-  padding-top: 2rem;
-  padding-right: 5rem;
+  /* new */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8rem;
+
+  /* old */
+  /* padding-top: 2rem;
+  padding-right: 5rem; */
 }
 
 /*********************/
@@ -84,90 +97,145 @@
 .hero-section {
   display: flex;
   justify-content: space-between;
-  gap: 80rem;
-  height: auto;
+  /* old */
+  /* gap: 80rem;
+  height: auto; */
 
-
-
-}
-
-.hero {
-  /* display: flex;
-  justify-content: space-between;
-  gap: 10rem; */
-  max-width: 130rem;
-  padding: 0 5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10rem;
+  /* new */
   align-items: center;
-  margin-bottom: 2rem;
+  padding: 6rem 8rem;
+  height: 40rem;
 
 }
 
-.hero-text-box {}
+
+.hero-text-box {
+  max-width: 50rem;
+}
 
 
 .hero-description {
   color: #a47551;
   font-size: 1.8rem;
   line-height: 2.5rem;
-  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
-.vector-img {
-  width: 46rem;
-  height: 46rem;
+.hero-img img {
+  width: 30rem;
+
 }
 
 .socials {
   margin-top: 4rem;
+  /* new */
+  display: flex;
+  gap: 1.5rem;
+
 
 }
 
 .social-logo {
-  width: 3rem;
-  height: 3rem;
+  /* old */
+  width: 4rem;
+  height: 4rem;
   margin-right: 1.5rem;
   color: #fff;
   background-color: #a47551;
   border-radius: 50%;
   padding: 1rem;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.search-bar-form {
+.social-logo svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.wave {
+  width: 100%;
+  height: 8rem;
+  background: #f6eee1;
+  border-bottom-left-radius: 50% 70%;
+  border-bottom-right-radius: 50% 70%;
+  position: absolute;
+
+}
+
+/*************/
+/*SEARCH BAR*/
+/*************/
+
+.searchbar {
   display: flex;
   align-items: center;
+  /*old */
   justify-content: center;
 
+  /* new */
+  margin-top: 4rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 1px rgba(51, 51, 51, 0.336);
+  overflow: hidden;
+  width: fit-content;
+  margin: 4rem auto;
+  max-width: 90%;
+  width: 60rem;
+  position: relative;
+  top: 0;
+
 
 }
 
-.input-type-text {
+/* new */
+.searchbar input {
+  flex: 1;
+  padding: 1.5rem 1.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+
+}
+
+.searchbar input:first-child {
+  border-right: 1px solid #f6eee1;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.searchbar input:nth-child(2) {
+  border-left: 1px solid #f6eee1;
+}
+
+/* old */
+/* .input-type-text {
   font-size: 1.6rem;
   padding: 1rem 2rem;
-  /* border: 0.1px solid #eb5b13; */
-  /* box-shadow: 0 10px 30px rgba(53, 53, 53, 0.658); */
-}
+  
+} */
 
-.input-type-text::placeholder {
+.searchbar input::placeholder {
   color: #eb5b13;
 }
 
 .search-bar-btn:link,
 .search-bar-btn:visited {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   transition: all 0.3s;
   text-decoration: none;
   cursor: pointer;
-  padding: 1.2rem 2.4rem;
-  border-radius: 0 9px 9px 0;
+  padding: 1.7rem 5rem;
+  /* border-radius: 0 9px 9px 0; */
   color: #fff;
   background-color: #eb5b13;
+  /* new */
+  border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .search-bar-btn:hover,
@@ -209,6 +277,16 @@
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.types-icon svg {
+  width: 6rem;
+  height: 6rem;
 }
 
 .types-text {
